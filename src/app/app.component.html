@@ -1,0 +1,24 @@
+<!-- 앵귤러에선 {{}}가 표현식 기호이다 -->
+<!-- 표현식 기호에 컴포넌트에서 사용한 데이터 이름을 입력하면 html 파일에 나타낼 수 있다 -->
+<!-- public과 protected 데이터만 사용 가능 -->
+<!-- 데이터가 객체일 경우, Object로 표현되며, 문자와 숫자, 논리값은 정상적으로 표현 -->
+<!-- 앵귤러의 표현식은 컴포넌트 내부 데이터가 변경되면 자동으로 변경된다 -> "양방향 데이터 바인딩" -->
+
+<!-- (click) : html의 onclick에 대응 -->
+<!-- (click)을 선언한 후, 대입연사자를 통해 해당 클릭 이벤트 이후 동작할 함수를 기입 -->
+<!-- 앵귤러에선 통상적으로 html에서의 ()의 의미는 해당 컴포넌트에게 이벤트/데이터를 전달하는 의미 -->
+<!-- <button (click)="clickAfterPrint()">{{title}} <-클릭 이벤트 연습</button> -->
+
+<!-- 구조지시자 : html 태그 안에서 * 기호 옆에 명령어를 붙여준 후, 대입 연산자를 통해 동작할 명령어를 입력 -->
+<!-- showArray는 컴포넌트 내부에 존재하는 배열 값을 의미 -->
+<!-- 표현식 {{showArray}}으로 작성하면 실제로는 문자 형태로 표기만 된다. 때문에 세부적인 동작이 필요한 경우 구조지시자를 사용 -->
+<!-- 대입 연산자인 "let item of showArray"는 item(변수)가 of(명령어)를 통해 showArray의 데이터를 1개씩 받는 것을 의미 -->
+<!-- 구조지시자 *ngFor로 인해 showArray의 데이터가 item이라는 변수에 담겨 1개씩 반복문 형태로 동작하게 된다 -->
+<!-- 표현식 {{item}}은 item이라는 변수에 담긴 데이터를 html 파일에 나타내도록 한다 -->
+<!-- <div *ngFor="let item of showArray">{{item}}</div>
+<app-angular-test2></app-angular-test2> -->
+
+<div>Login Test</div>
+<input type="text" placeholder="id" [(ngModel)]="id">
+<input type="text" placeholder="password" [(ngModel)]="pwd">
+<button (click)="tryLogin()" >로그인</button>
